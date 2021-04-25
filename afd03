@@ -1,0 +1,10 @@
+tmux new-session -s afd03 -n editor -d
+tmux send-keys -t afd03 'cd ~/Vagrant/AFD/chap03' C-m
+tmux send-keys -t afd03 'vim' C-m
+tmux split-window -v -t afd03
+tmux select-layout -t afd03 main-horizontal
+tmux send-keys -t afd03:1.2 'cd ~/Vagrant/AFD/chap03' C-m
+tmux new-window -n console -t afd03
+tmux send-keys -t afd03:2 'cd ~/Vagrant/AFD/chap03' C-m
+tmux select-window -t afd03:1
+tmux attach -t afd03
