@@ -1,0 +1,12 @@
+# ~/.tmuxinator/development.yml
+
+name: development
+root: ~/src/tmux2pmfd
+
+windows:
+  - editor:
+      layout: main-horizontal
+      panes:
+        - vim
+        - #empty, will just run a shell
+  - console: #empty
